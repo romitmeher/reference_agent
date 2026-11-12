@@ -191,9 +191,24 @@ def http_get(url, max_chars=1200):
     return cleaned[:max_chars] if cleaned else "(the page had no readable text)"
 
 
+def word_count(text):
+    """Count whitespace-separated words in text."""
+    if not isinstance(text, str):
+        raise ToolError("text must be a string")
+    return str(len(text.split()))
+
+
 # ----------------------------------------------------------------- registry
 
 TOOLS = {
+    "word_count": {
+        "fn": word_count,
+        "description": "Count whitespace-separated words in text.",
+        "parameters": {
+            "text": {"type": "string", "required": True,
+                     "description": "The text whose words should be counted."},
+        },
+    },
     "calculator": {
         "fn": calculator,
         "description": "Evaluate an arithmetic expression. Use this for any "
