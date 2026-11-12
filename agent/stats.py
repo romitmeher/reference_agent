@@ -1,3 +1,4 @@
+# Maintained by romitmeher.
 """Small summary statistics over the sensor readings.
 
 Plain functions over a list of numbers. Nothing here knows anything about the
