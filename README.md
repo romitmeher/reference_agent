@@ -1,6 +1,6 @@
 # Reference Agent
 
-Agent project.
+Reference Agent is the shared Python project for the Git and GitHub labs.
 
 To run:
 
