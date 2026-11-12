@@ -37,10 +37,11 @@ def smallest(values):
 
 
 def summarise(values):
-    """All three, as a dict."""
+    """All four statistics, as a dict."""
     return {"mean": mean(values),
             "median": median(values),
-            "spread": spread(values)}
+            "spread": spread(values),
+            "smallest": smallest(values)}
 
 
 if __name__ == "__main__":
