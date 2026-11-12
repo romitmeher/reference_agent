@@ -29,6 +29,13 @@ def spread(values):
     return round(max(values) - min(values), 2)
 
 
+def smallest(values):
+    """The smallest value, rounded to two places."""
+    if not values:
+        raise ValueError("smallest of an empty list")
+    return round(min(values), 2)
+
+
 def summarise(values):
     """All three, as a dict."""
     return {"mean": mean(values),
