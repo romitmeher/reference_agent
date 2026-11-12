@@ -46,6 +46,6 @@ if __name__ == "__main__":
     with io.open(path, encoding="utf-8", newline="") as fh:
         rows = list(csv.DictReader(fh))
 
-    for column in ("temperature_c", "humidity_pct", "soil_moisture_pct"):
+    for column in ("temperature_c", "humidity_pct", "soil_moisture_pct", "light_lux"):
         numbers = [float(r[column]) for r in rows]
         print("%-20s %s" % (column, summarise(numbers)))
